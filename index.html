@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="card ">
+            <div class="intro">
+                <img src="./Assets/img1.png" alt="">
+                <h1>LIFELINE</h1>
+                <h2>Save Taylor!</h2>
+            </div>
+            <p class="about">Experience the one-of-a-kind interactive experience in storytelling</p>
+            <button class=" btn btn-start">
+                Start
+            </button>
+            <p class="headphones">Headphones Recommended.</p>
+            <img src="./Assets/sochcast.png" alt="">
+           
+
+        </div>
+        <div class="card-overlay"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+         let audio = new Audio('./Assets/audio.mp3');
+         let btnStart = document.querySelector('.btn-start');
+         let card = document.querySelector('.card');
+         const arr = [];
+         const arr2 = [];
+         const arr3 = [];
+         const arr4 = [];
+
+         btnStart.onclick = () => {
+            audio.play();
+
+            card.innerHTML = `<div class='circle'>
+                <img src="./Assets/wave.png" alt="">
+            </div>
+            <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">`;
+            card.style.animation = `switch 0.2s 1`;
+            setTimeout(()=>{
+                card.classList.add('dark');
+            card.classList.add('waving');
+            },200)
+            
+ 
+        }
+        
+        
+        audio.addEventListener('timeupdate',()=>{
+            console.log(audio.currentTime);
+       
+            if(audio.currentTime > 13){
+            
+            if(arr.length == 0){
+                firstQuestion();
+            }
+
+            let choices = document.querySelectorAll('.choices');
+     
+            choices.forEach((btn)=>{
+              btn.onclick  = ()=>{
+              console.log(1);
+              if(audio.currentTime < 20){
+
+                card.innerHTML = `<div class='circle'>
+                <img src="./Assets/wave.png" alt="">
+            </div>
+            <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">`;
+            }
+        }
+
+        })
+
+     }
+
+
+
+
+
+     
+     if(audio.currentTime > 27){
+
+        console.log('trick');
+        if(arr2.length == 0){
+            SecondQuestion();
+            console.log('triggered');
+            }
+
+            let choices = document.querySelectorAll('.choices');
+     
+            choices.forEach((btn)=>{
+              btn.onclick  = ()=>{
+              if(audio.currentTime < 31){
+
+                card.innerHTML = `<div class='circle'>
+                <img src="./Assets/wave.png" alt="">
+            </div>
+            <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">`;
+            }
+        }
+
+        })
+     }
+
+
+
+
+     if(audio.currentTime > 43){
+        if(arr3.length == 0){
+            ThirdQuestion();
+            console.log('triggered');
+            }
+
+            let choices = document.querySelectorAll('.choices');
+     
+            choices.forEach((btn)=>{
+              btn.onclick  = ()=>{
+              if(audio.currentTime < 48){
+
+                card.innerHTML = `<div class='circle'>
+                <img src="./Assets/wave.png" alt="">
+            </div>
+            <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">`;
+            }
+        }
+
+        })
+     }
+
+
+
+
+
+
+
+     if(audio.currentTime > 82){
+        if(arr4.length == 0){
+            FourthQuestion();
+            console.log('triggered');
+            }
+
+            let choices = document.querySelectorAll('.choices');
+     
+            choices.forEach((btn)=>{
+              btn.onclick  = ()=>{
+              if(audio.currentTime < 88){
+
+                card.innerHTML = `<img class='logo' src='./Assets/sochcast-light.png' alt=''>
+                <p class='download'>Download the app to listen to the full story</p>
+                <button class='btn btn-download choices'>Download on Google Play</button> 
+                `;
+            }
+        }
+
+        })
+     }
+
+
+        })
+
+
+     function firstQuestion(){
+        card.innerHTML = `<h2 style='text-align:center;font-size:16px;color:#fff;font-weight:400;'>Choose to continue the interactive experience</h2>
+        <div class='btn-container'>
+            <button class='btn choices btn-1'>Who is this?</button>
+            <button class='btn choices btn-2'>I read you.</button>
+            </div>
+            <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">
+
+        `;
+        arr.push(1);
+     }
+
+     function SecondQuestion(){
+        card.innerHTML = `<h2 style='text-align:center;font-size:16px;color:#fff;font-weight:400;'>Choose to continue the interactive experience</h2>
+        <div class='btn-container'>
+            <button class='btn choices fs14 btn-1'>Who are you?</button>
+            <button class='btn choices fs14 btn-2'>What happened?</button>
+            </div>
+            <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">
+
+        `;
+        arr2.push(1);
+     }
+
+
+     function ThirdQuestion(){
+        card.innerHTML = `<h2 style='text-align:center;font-size:16px;color:#fff;font-weight:400;'>Choose to continue the interactive experience</h2>
+        <div class='btn-container'>
+            <button class='btn choices  btn-1'>The Varia?</button>
+            <button class='btn choices fs14 btn-2'>"Was", what happened?</button>
+            </div>
+            <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">
+
+        `;
+        arr3.push(1);
+     }
+
+     function FourthQuestion(){
+        card.innerHTML = `<h2 style='text-align:center;font-size:16px;color:#fff;font-weight:400;'>Choose to continue the interactive experience</h2>
+        <div class='btn-container'>
+            <button class='btn choices fs14 btn-1'>Are you alright?</button>
+            <button class='btn choices fs14 btn-2'>Where are you?</button>
+            </div>
+            <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">
+
+        `;
+        arr4.push(1);
+     }
+
+
+
+
+     
+        
+    </script>
+</body>
+</html>

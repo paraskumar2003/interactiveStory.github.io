@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*>*{
+    transition: 0.2s all ease-out;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins',sans-serif;
+}
+
+.btn{
+    background:transparent;
+    border: none;
+    cursor: pointer;
+}
+.main-container{
+    width: 100%;
+    max-width: 400px;
+}
+.card{
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s all ease-out;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    padding: 5rem 1rem 1rem 1rem;
+    border: 2px solid rgba(110,80,220,0.6);
+    position: relative;
+}
+.card-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0);
+    transition: 0.2s all ease-out;
+    z-index: -1;
+}
+@keyframes switch {
+    0%{
+        background-color: rgba(0,0,0,0);
+    }
+    100%{
+        background-color: rgba(0,0,0,1);
+    }
+    
+}
+.card .intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.card .intro img{
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.card .intro h1{
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    line-height:15px;
+}
+.card .intro h2{
+    font-weight: 300;
+    font-size:22px;
+}
+
+.card p.about{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card .btn-start{
+    padding: 12px 48px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+.card p.headphones{
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+.dark{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+@media (max-width:500px) {
+    .card{
+        min-height: 100vh;
+    }
+    
+}
+.waving{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.waving div.circle{
+    margin-bottom: 100px;
+    border: 2px solid rgb(255, 255, 255);
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 2rem;
+}
+.waving div.circle img{
+    width: 80%;
+}
+.logo-at-buffer{
+    position: absolute;
+    bottom: 50px;
+    width: 20%;
+}
+.btn-container{
+    width: 100%;
+    padding:1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.choices{
+    padding: 8px 24px;
+    background: #000;
+    border: 2px solid #fff;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 5px;
+    max-width: 45%;
+}
+.fs14{
+    font-size: 14px !important;
+}
+.logo{
+    width: 30%;
+}
+.download{
+    padding: 2rem 0;
+}
+.btn-download{
+    margin: 2rem 0;
+    max-width:100% !important;
+}
+
