@@ -58,7 +58,7 @@
         
         
         audio.addEventListener('timeupdate',()=>{
-            console.log(audio.currentTime);
+            
        
             if(audio.currentTime > 13){
             
@@ -70,7 +70,6 @@
      
             choices.forEach((btn)=>{
               btn.onclick  = ()=>{
-              console.log(1);
               if(audio.currentTime < 20){
 
                 card.innerHTML = `<div class='circle'>
@@ -91,17 +90,17 @@
      
      if(audio.currentTime > 27){
 
-        console.log('trick');
+        
         if(arr2.length == 0){
             SecondQuestion();
-            console.log('triggered');
+            
             }
 
             let choices = document.querySelectorAll('.choices');
      
             choices.forEach((btn)=>{
               btn.onclick  = ()=>{
-              if(audio.currentTime < 31){
+              if(audio.currentTime < 34){
 
                 card.innerHTML = `<div class='circle'>
                 <img src="./Assets/wave.png" alt="">
@@ -119,14 +118,14 @@
      if(audio.currentTime > 43){
         if(arr3.length == 0){
             ThirdQuestion();
-            console.log('triggered');
+            
             }
 
             let choices = document.querySelectorAll('.choices');
      
             choices.forEach((btn)=>{
               btn.onclick  = ()=>{
-              if(audio.currentTime < 48){
+              if(audio.currentTime < 50){
 
                 card.innerHTML = `<div class='circle'>
                 <img src="./Assets/wave.png" alt="">
@@ -147,7 +146,7 @@
      if(audio.currentTime > 82){
         if(arr4.length == 0){
             FourthQuestion();
-            console.log('triggered');
+            
             }
 
             let choices = document.querySelectorAll('.choices');
