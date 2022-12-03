@@ -168,7 +168,7 @@
 
                 card.innerHTML = `<img class='logo' src='./Assets/sochcast-light.png' alt=''>
                 <p class='download'>Download the app to listen to the full story</p>
-                <button class='btn btn-download choices'>Download on Google Play</button> 
+                <button class='btn btn-download choices' onclick='mixpanel.track('Clicked on download')'>Download on Google Play</button> 
                 `;
             }
         }
@@ -189,6 +189,9 @@
             <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">
 
         `;
+        mixpanel.track('First Question Passes',{
+            'data':'whatever specified',
+        })
         arr.push(1);
      }
 
@@ -201,6 +204,9 @@
             <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">
 
         `;
+        mixpanel.track('Second Question Passes',{
+            'data':'whatever specified',
+        })
         arr2.push(1);
      }
 
@@ -214,6 +220,9 @@
             <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">
 
         `;
+        mixpanel.track('Third Question Passes',{
+            'data':'whatever specified',
+        })
         arr3.push(1);
      }
 
@@ -226,6 +235,9 @@
             <img class="logo-at-buffer" src="./Assets/sochcast-light.png" alt="">
 
         `;
+        mixpanel.track('Fourth Question Passes',{
+            'data':'whatever specified',
+        })
         arr4.push(1);
      }
 
