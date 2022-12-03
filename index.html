@@ -19,7 +19,7 @@
     
     // Enabling the debug mode flag is useful during implementation,
     // but it's recommended you remove it for production
-    mixpanel.init('8bc3f69dd17fae4e196bde90a3bb3969', {ignore_dnt:true}); 
+    mixpanel.init('8bc3f69dd17fae4e196bde90a3bb3969', {debug:true,ignore_dnt:true}); 
     </script>
 </head>
 <body>
@@ -237,9 +237,10 @@
     </script>
     <script>
         window.addEventListener("DOMContentLoaded",()=>{
-            mixpanel.track('sign up',{
-                'source':'unknown'
-            })
+            mixpanel.track('Sign Up', {
+  'source': "Pat's affiliate site",
+  'Opted out of email': true,
+});
         })
     </script>
 </body>
